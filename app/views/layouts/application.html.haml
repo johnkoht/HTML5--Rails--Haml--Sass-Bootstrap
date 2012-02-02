@@ -2,9 +2,11 @@
 - conditional_html 'en'
 
 %head
-  = render "layouts/scaffold/head"
+  = render 'layouts/scaffold/head'
 
 %body
-  = render "layouts/scaffold/navigation"
+  = render 'layouts/scaffold/navigation'
   
   = yield
+  
+  = render 'layouts/scaffold/footer'

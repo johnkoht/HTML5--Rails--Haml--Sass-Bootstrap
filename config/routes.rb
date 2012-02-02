@@ -1,4 +1,10 @@
 Kohstrapped::Application.routes.draw do
+  
+  root :to => 'application#index'
+  
+  match 'about', :to => 'application#about', :as => 'about'
+  match 'contact', :to => 'application#contact', :as => 'contact'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

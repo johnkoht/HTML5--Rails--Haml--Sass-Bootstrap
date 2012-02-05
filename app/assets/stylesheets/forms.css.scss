@@ -1,1 +1,168 @@
 // Forms
+
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  font-size: 100%;
+  vertical-align: middle;
+}
+
+input {
+  padding: 7px;
+  font-size: 14px;
+  color: $grey;
+  border: 1px solid $greyLight;
+  @include border-radius(3px);
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input.extra_small {
+  width: 100px;
+}
+input.small {
+  width: 200px;
+}
+input.medium {
+  width: 325px;
+}
+input.large {
+  width: 450px;
+}
+input.extra_large {
+  width: 600px;
+}
+
+label {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+form {
+  display: block;
+  border: none;
+  
+  fieldset {
+    display: block;
+    clear: both;
+    margin-bottom: 20px;
+  }
+  
+  ol {
+    list-style: none;
+    display: block;
+    clear: both;
+    margin: 0;
+    padding: 0;
+    
+    li {
+      display: block;
+      clear: both;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+/*
+ *	BUTTONS, SUBMIT, ETC.
+ *
+*/
+button, input {
+  *overflow: visible;
+  line-height: normal;
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+  padding: 0;
+  border: none;
+}
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+  vertical-align: top;
+}
+.btn { 
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-size: 14px; 
+  font-weight: 200; 
+  @include non-selectable();
+  @include border-radius(4px);
+  text-decoration:none !important;
+  padding: 5px;
+}
+a.btn {
+  padding: 5px 10px;
+  display: inline-block;
+}
+
+
+.grey_btn {
+  background: asset-url('buttons/grey_btn.png', image) top left repeat-x;
+  color: $greyDark;
+  text-shadow:1px 1px 1px #f9f9f9;
+  @include box-shadow(0px, 1px, 0px, #bebebe);
+  border: 1px solid #ccc;
+}
+.grey_btn:hover {
+  background: asset-url('buttons/grey_hover.png', image) top left repeat-x;
+}
+.grey_active, .grey_btn:active, .grey_active:hover {
+  background: asset-url('buttons/grey_btn_active.png', image) top left repeat-x;
+  color: $greyDark;
+  text-shadow:1px 1px 1px #f0f0f0;
+  @include box-shadow(0px,1px,0px,$white);
+}
+.black_btn {
+  background: asset-url('buttons/black_btn.png', image) top left repeat-x;
+  color:#b9b9b9 !important; 
+  @include box-shadow(0px 1px 1px #a24ea0);
+  border:1px solid #000;
+}
+.black_btn:hover {
+  background: asset-url('buttons/black_btn_hover.png', image) top left repeat-x;
+  @include box-shadow(0px, 0px, 21px,#edb5ec);
+}
+
+
+.blue_btn {
+  background: asset-url('buttons/blue_btn.png', image) top left repeat-x;
+  border:1px solid #002653; 
+  color: $white;
+  text-shadow: none !important;
+}
+
+.blue_btn:hover {
+  background: asset-url('buttons/blue_btn_hover.png', image) top left repeat-x;
+}
+.darkgrey_btn {
+  background: asset-url('buttons/dark_grey_btn.png', image) top left repeat-x;
+  border:1px solid #242424;
+  color:#ccc;
+}
+.cancel_btn:hover {
+  background: asset-url('buttons/dark_grey_btn_hover.png', image) top left repeat-x;
+}
+.light_grey_btn {
+  background: asset-url('buttons/light_grey_btn.png', image) top left repeat-x;
+  border:1px solid #b4b4b4;
+  text-shadow:1px 1px 1px #f7f7f7;
+  color: #414141;
+}
+.light_grey_btn:hover {
+  background: asset-url('buttons/light_grey_btn_hover.png', image) top left repeat-x;
+}

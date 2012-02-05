@@ -1,0 +1,86 @@
+/******************************************************
+ *  Notifications System
+******************************************************/
+
+
+// Growl like notifications
+#notification_container { 
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 250px;
+  z-index:3000;
+  height: auto;
+}
+
+.koh_notification { 
+  display: block;
+  clear: both;
+  z-index:3000;
+  min-height: 50px;
+  height: auto;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, .75);
+  @include border-radius(10px);
+  margin-bottom:10px;
+  cursor:pointer;
+  
+  .notification_type {
+    padding-left: 65px; 
+  }
+  
+  span {
+    display:block;
+    clear:both;
+  }
+  
+  .notification_title {
+    font-size: 15px;
+    color: $white;
+    font-weight: 400;
+    margin-bottom:5px;
+  }
+  
+  .notification_message {
+    font-size: 13px;
+    color:#ccc;
+  }  
+}
+
+.notification:before, .notification:after {
+  display: table;
+  content: "";
+  zoom: 1;
+}
+.notification:after {
+  clear: both;
+}
+ 
+ 
+div.success {
+  background: asset-url('icons/success.png', image) top left no-repeat;
+}
+div.error {
+  background: asset-url('icons/error.png', image) top left no-repeat;
+}
+div.info {
+  background: asset-url('icons/info.png', image) top left no-repeat;
+}
+div.trash {
+  background: asset-url('icons/trash.png', image) top left no-repeat;
+}
+div.alert {
+  background: asset-url('icons/alert.png', image) top left no-repeat;
+}
+div.user {
+  background: asset-url('icons/user.png', image) top left no-repeat;
+}
+div.star {
+  background: asset-url('icons/star.png', image) top left no-repeat;
+}
+div.upload {
+  background: asset-url('icons/upload.png', image) top left no-repeat;
+}
+div.globe {
+  background: asset-url('icons/globe.png', image) top left no-repeat;
+}

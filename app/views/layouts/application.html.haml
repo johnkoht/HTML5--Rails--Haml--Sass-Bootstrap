@@ -2,11 +2,16 @@
 - conditional_html 'en'
 
 %head
+  // Render the head with all the meta, title, scripts, etc
   = render 'layouts/scaffold/head'
 
 %body
-  = render 'layouts/scaffold/navigation'
   
+  // Render the header, navigation and any other mark-up
+  = render 'layouts/scaffold/header'
+  
+  // This will yield the current view
   = yield
   
+  // Render the footer
   = render 'layouts/scaffold/footer'
